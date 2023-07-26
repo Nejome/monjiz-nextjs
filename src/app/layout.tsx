@@ -1,8 +1,14 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { IBM_Plex_Sans_Arabic } from 'next/font/google'
+import Header from "@/app/components/Header"
 
-const inter = Inter({ subsets: ['latin'] })
+
+const ibm_plex_sans_arabic = IBM_Plex_Sans_Arabic({
+  weight: '400',
+  subsets: ['arabic'],
+  display: "auto"
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +22,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={ibm_plex_sans_arabic.className}>
+      <Header />
+      {children}
+      </body>
     </html>
   )
 }

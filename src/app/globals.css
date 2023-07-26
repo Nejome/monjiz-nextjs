@@ -2,26 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@layer components {
+    .active {
+        @apply text-green-550 bg-green-50;
+    }
+    .card {
+        @apply bg-white border border-solid rounded-2xl;
+    }
+    .btn1 {
+        @apply inline-block bg-green-550 text-white px-5 py-2 rounded-3xl hover:bg-green-650;
+    }
+    .input {
+        @apply block w-full h-[43px] px-3 py-2 border border-solid rounded focus:shadow focus:outline-none text-gray-500;
+    }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    direction: rtl;
+    background: #f9fafb;
+}
+
+.logo {
+
 }
